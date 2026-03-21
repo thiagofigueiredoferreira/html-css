@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>combinators</title>
+    <style>
+.article  p {
+    color: red;
+}
+span, mark {
+    color: red;
+}
+.ti + p {
+    color: red;
+}
+aside > ul {
+    margin-top: 60px;
+}
+
+
+    </style>
+</head>
+<body>
+    <h1>Combinators</h1>
+    <p>Combinators são funções de ordem superior que combinam outras funções para criar novas funcionalidades. Eles são amplamente utilizados em programação funcional para construir programas de maneira modular e reutilizável.</p>
+<!--Decendent-->
+<article class="article">
+    <h1>titulo</h1>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, quo corporis quisquam quaerat eaque fugiat iure, rerum illum iste quidem illo aperiam deleniti hic praesentium temporibus. Distinctio assumenda velit aliquam!</p>
+</article>
+<!--List-->
+<article class="ar">
+    <h1>titulo</h1>
+<p>Lorem ipsum dolor sit amet <span>consectetur</span>, adipisicing elit. Beatae, quo corporis quisquam quaerat eaque fugiat iure, rerum illum iste quidem illo aperiam deleniti hic praesentium temporibus. <mark>Distinctio</mark> assumenda velit aliquam!</p>
+</article>
+<!--Next sibling-->
+<article class="ti">
+    <h2>titulo</h2>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, quo corporis quisquam quaerat eaque fugiat iure, rerum illum iste quidem illo aperiam deleniti hic praesentium temporibus. Distinctio assumenda velit aliquam!</p>
+</article>
+<!--child-->
+<aside>
+    <ul>
+        <li>One
+            <ul>
+                <li>item1</li>
+                <li>item2</li>
+            </ul>
+        </li>
+        <li>Two</li>
+        <li>Three</li>
+    </ul>
+</aside>
+</body>
+</html>
