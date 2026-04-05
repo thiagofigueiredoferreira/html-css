@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card- variáveis</title>
+    <style>
+        /* Variáveis CSS globais */
+        :root {
+            --bg-color: rgb(118, 118, 203);
+            --card-bg:white;
+            --text-main:black;
+            --accent-color:rgb(101, 101, 101);
+            --spacing:24px;
+        }
+        /* Tema escuro */
+        .dark-theme {
+  --bg-color: #121212;
+  --card-bg: #1e1e1e;
+  --text-main: #ffffff;
+  --accent-color: #fbbf24; /* Um amarelo/dourado para o modo dark */
+}
+
+
+        /* Estilos do corpo da página */
+        body {
+            background-color: var(--bg-color);
+            display: flex;
+            justify-content:center; /* Centraliza horizontalmente */
+            align-items:center; /* Centraliza verticalmente */
+            height:100vh;
+            font-family:sans-serif;
+        }
+        /* Estilos do cartão de perfil */
+        .card {
+            background-color: var(--card-bg);
+            padding: var(--spacing);
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            color:var(--text-main);
+            width: 250px;
+            
+        }
+        /* Estilos da imagem de perfil */
+        .profile-pic {
+            width: 80px;
+            height: 80px;
+            background-color: #ddd;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            border: 3px solid var(--accent-color);
+        }
+        /* Estilos do botão */
+        button {
+            background-color: var(--accent-color);
+            color: white;
+              border: none;
+              padding: 10px 20px;
+              border-radius: 6px;
+              cursor: pointer; /* Mostra cursor de mão */
+              transition: opacity 0.2s; /* Transição suave na opacidade */
+        }
+        /* Efeito hover do botão */
+        button:hover {
+            opacity: 0.8;
+        }
+
+    </style>
+</head>
+<body class="dark-theme">
+  <!-- Container do cartão de perfil -->
+  <div class="card">
+    <!-- Imagem de perfil -->
+    <div class="profile-pic"></div>
+    <!-- Nome do usuário -->
+    <h1>Nome do usuario</h1>
+    <!-- Descrição profissional -->
+    <p>Desenvolvedor Front-end</p>
+    <!-- Botão para seguir o usuário -->
+    <button>Seguir</button>
+  </div>
+    
+</body>
+</html>

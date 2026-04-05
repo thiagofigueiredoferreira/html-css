@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variáveis</title>
+    <style>
+        /* Variáveis globais definidas em :root (escopo global) */
+        :root {
+            --bg-color: lightblue;          /* cor de fundo padrão */
+            --text-color: #333;             /* cor de texto padrão */
+            --accent-color: #ff6600;        /* cor de destaque */
+            --spacing: 16px;                /* espaçamento base */
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: var(--bg-color);        /* uso de variável */
+            color: var(--text-color);
+            padding: var(--spacing);
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            padding: calc(var(--spacing) * 1.5);     /* calc com var */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+
+            /* variável local dentro de .card (não afeta card2) */
+            --accent-color: #0099ff;
+        }
+
+        .card h1 {
+            margin-top: 0;
+            color: var(--accent-color);               /* usa valor local na árvore */
+        }
+
+        .card p {
+            margin-bottom: 0;
+        }
+
+        .card2 {
+            margin-top: var(--spacing);
+            background-color: #f7f7f7;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: var(--spacing);
+            color: var(--text-color);
+        }
+
+        .card2 h1 {
+            color: var(--accent-color, #d12);       /* fallback se variável inexistente */
+        }
+
+        /* exemplo com sass-like: usando var dentro de var */
+        .titulo-pequeno {
+            font-size: var(--base-font-size, 18px);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Variáveis CSS</h1>
+        <p>Este cartão usa <code>--accent-color</code> local a este .card.</p>
+    </div>
+
+    <div class="card2">
+        <h1>Outro card</h1>
+        <p>Aqui, o mesmo nome de variável global (accent-color) continua disponível.</p>
+    </div>
+</html>

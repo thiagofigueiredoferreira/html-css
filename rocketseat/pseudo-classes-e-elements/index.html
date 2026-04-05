@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Classes e Elementos</title>
+    <style> 
+
+     :root {
+        /* raiz para variáveis CSS globais */
+     }
+
+    div:hover {
+        background-color: #fff; /* fundo branco em hover */
+    } 
+
+    div:not(.nao) {
+        background-color: #10c3a5; /* todos div sem classe .nao */
+    } 
+
+     div:nth-child(3) {
+        background-color: green; /* terceiro filho do pai */
+     }
+      
+    section:has(div:hover) {
+        border: 2px solid red; /* tipo parent selector com hover */
+
+    }
+    div::first-letter {
+        font-size: 40px; /* primeira letra maior */
+    }
+    div {
+        position: relative; /* contexto para pseudo-elemento absoluto */
+    }
+
+    div::before {
+        content: "a"; /* insere texto antes do conteúdo do div */
+        height: 100%;
+        width: 2px;
+        background-color: red;
+        position: absolute;
+        top: 0;
+        left: 0;
+        /* cria barra fina vermelha no lado esquerdo */
+    }
+
+
+    </style>
+</head>
+<body>
+
+    <style>
+        div {
+            width: 48px;
+            height: 48px;
+            border: solid;
+            text-align: center;
+            line-height: 250%;
+            margin-top: 4px;
+        }
+    </style>
+    <section>
+        <div>1</div>
+        <div class="nao">2</div>
+        <div>3</div>
+    </section>
+</body>
+</html>
