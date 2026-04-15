@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gap e margin</title>
+    <style>
+        .container {
+            display: flex;
+            /* gap:  10px 20px; Significa:10px entre linhas (vertical) 20px entre colunas (horizontal) espaços entre os elementos */ 
+            /* row-gap: 20px; Espaço vertical (entre linhas) */
+            /* column-gap: 20px; Espaço horizontal (entre colunas) */
+
+            /* margin: 10px;              /* todos os lados */
+            /* margin: 10px 20px;         topo/baixo | esquerda/direita */
+            /* margin: 10px 20px 30px;    topo | lados | baixo */
+            /* margin: 10px 20px 30px 40px; /* topo | direita | baixo | esquerda */  
+            /* margin-top: 10px; Margem em cima do elemento. */
+            /* margin-bottom: 20px; Margem embaixo do elemento */
+            /* margin-left: 20px; Margem à esquerda. */
+            /* margin-right: 20px; Margem à esquerda. */
+            /* margin-inline: 20px; Controla as margens horizontais (esquerda + direita). */
+            /* margin-block: 20px; Controla as margens verticais (topo + baixo). */
+           
+
+            
+            
+        }
+    </style>
+</head>
+<body>
+      
+    
+    <style>
+        .container {
+            border: dashed;
+        }
+        .item {
+            --hue: 0;
+            text-align: center;
+            background-color: hsl(var(--hue), 100%, 70%);
+            width: 20px;
+        }
+    </style>
+    <div class="container">
+          <div class="item"  style= "--hue:0">1</div>
+          <div class="item"  style="--hue:100">2</div>
+          <div class="item"  style="--hue:200">3</div>
+          <div class="item"  style="--hue:300">4</div>
+    </div>
+
+</body>
+</html>

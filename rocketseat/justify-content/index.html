@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>justify-content</title>
+    <style>
+.container {
+     font-size: 5em; /*tamanho da letra */
+  display: flex;
+   /* flex-direction: row-reverse;  */
+  /* justify-content:space-between ; espaço entre cada elemento */
+  /* justify-content: space-evenly; espaços constantes entre eles */
+  /* justify-content: space-around;  espaço ao redor de cada elemento  */
+  /* flex-direction: column; formato em coluda de cima para baixo */
+   /* height: 50vh; tamanho da altura */
+}
+
+
+    </style>
+</head>
+<body>
+
+    <style>
+        .container {
+            border: dashed;
+        }
+        .item {
+            --hue: 0;
+            text-align: center;
+            background-color: hsl(var(--hue), 100%, 70%);
+        }
+    </style>
+    <div class="container">
+          <div class="item"  style="--hue:0">1</div>
+          <div class="item"  style="--hue:100">2</div>
+          <div class="item"  style="--hue:200">3</div>
+          <div class="item"  style="--hue:300">4</div>
+    </div>
+</body>
+</html>

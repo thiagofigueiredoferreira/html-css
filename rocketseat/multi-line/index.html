@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Linnhas</title>
+    <style>
+        .container {
+            width:500px ;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            /* align-content: center; todos os conteudos vão ficar juntos no centro  */
+            /* align-content: flex-end; o conteudos vao ficar juntos la em baixo */
+            /* align-content: flex-start; os conteudos vão ficar juntos em cima */
+            /* flex-wrap: nowrap; por padrão ele ja é assim */
+            /* flex-wrap: wrap-reverse; isso faz com que ele tenha um reverse nos itens do conteudo */
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+      <style>
+        .container {
+            border: dashed;
+
+        }
+        .item {
+            --hue: 0;
+            text-align: center;
+            background-color: hsl(var(--hue), 100%, 70%);
+            width: 120px;
+        }
+    </style>
+    <div class="container">
+          <div class="item"  style= "--hue:0">1</div>
+          <div class="item"  style="--hue:100">2</div>
+          <div class="item"  style="--hue:200">3</div>
+          <div class="item"  style="--hue:300">4</div>
+           <div class="item"  style= "--hue:0">5</div>
+          <div class="item"  style="--hue:100">6</div>
+          <div class="item"  style="--hue:200">7</div>
+          <div class="item"  style="--hue:300">8</div>
+    </div>
+
+</body>
+</html>
