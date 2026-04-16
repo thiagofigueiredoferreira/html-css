@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex grow e Flex shrink</title>
+     <style>
+        .container {
+            height: 50vh; /* Altura definida para o container */
+            /* width: 848px;  largura definida para o container */
+             display: flex; /*ativa o modo flex no containe */
+            /* flex-direction: column;  define a direção dos itens row = linha, column = coluna */
+            /* align-items: stretch;  alinha os itens no eixo cruzado (vertical por padrão) */
+        }
+        .item {
+            width: 20px;
+            /* flex-basis: 120px; */
+            /* flex-grow: 1; /* flex-grow: define quanto o elemento vai crescer 
+   dentro do container flex quando houver espaço disponível */ 
+            /* flex-shrink:0 ; */
+            /* flex-shrink: define quanto o elemento vai encolher
+   quando faltar espaço no container flex */
+        }
+            .item:nth-child(2) {
+                flex-grow: 3; 
+                /* flex-shrink: 1; */
+
+            }
+
+        
+
+        
+    </style>
+</head>
+<body>
+      <style>
+        .container {
+            border: dashed;
+
+        }
+        .item {
+            --hue: 0;
+            text-align: center;
+            background-color: hsl(var(--hue), 100%, 70%);
+
+        }
+    </style>
+    <div class="container">
+          <div class="item"  style= "--hue:0">1</div>
+          <div class="item"  style="--hue:100">2</div>
+          <div class="item"  style="--hue:200">3</div>
+          <div class="item"  style="--hue:300">4</div>
+           <div class="item"  style= "--hue:0">5</div>
+          <div class="item"  style="--hue:100">6</div>
+          <div class="item"  style="--hue:200">7</div>
+          <div class="item"  style="--hue:300">8</div>
+    </div>
+
+</body>
+</html>
+   
