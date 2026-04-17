@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex grow e Flex shrink</title>
+     <style>
+        .container {
+            height: 100px; /* Altura definida para o container */
+             display: flex; /*ativa o modo flex no containe */
+          
+        }
+
+      
+.item {
+    flex: 1 0 120px;
+    /* FLEX: 1 0 120px;
+   1 (flex-grow): O item VAI crescer para ocupar o espaço disponível.
+   0 (flex-shrink): O item NÃO vai encolher, mesmo que falte espaço.
+   120px (flex-basis): O tamanho inicial do item é 120px.
+*/
+
+}
+
+           /* flex-basis: 120px; */
+
+            /* flex: initial;   FLEX: INITIAL (Padrão) 
+   Atalho para:
+   - flex-grow: 0 (Não cresce além do tamanho original)
+   - flex-shrink: 1 (Encolhe se o espaço for muito pequeno)
+   - flex-basis: auto (Tamanho base é o conteúdo) */
+
+
+
+           /* flex: auto;    /* FLEX: AUTO 
+   Atalho rápido para:
+   - flex-grow: 1 (Cresce para ocupar o espaço)
+   - flex-shrink: 1 (Encolhe se necessário)
+   - flex-basis: auto (Tamanho base é o conteúdo)
+*/ 
+
+/*flex: none;  FLEX: NONE
+   Atalho para:
+   - flex-grow: 0 (Não cresce)
+   - flex-shrink: 0 (Não encolhe)
+   - flex-basis: auto (Tamanho base é o conteúdo)
+   Resumo: O item fica totalmente rígido/fixo.
+*/
+
+           
+         
+        
+           
+
+        
+
+        
+    </style>
+</head>
+<body>
+      <style>
+        .container {
+            border: dashed;
+
+        }
+        .item {
+            --hue: 0;
+            text-align: center;
+            background-color: hsl(var(--hue), 100%, 70%);
+
+        }
+    </style>
+    <div class="container">
+          <div class="item"  style= "--hue:0">1</div>
+          <div class="item"  style="--hue:100">2</div>
+          <div class="item"  style="--hue:200">3</div>
+          <div class="item"  style="--hue:300">4</div>
+           <div class="item"  style= "--hue:0">5</div>
+          <div class="item"  style="--hue:100">6</div>
+          <div class="item"  style="--hue:200">7</div>
+          <div class="item"  style="--hue:300">8</div>
+    </div>
+
+</body>
+</html>
