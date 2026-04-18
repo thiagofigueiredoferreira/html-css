@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <style>
+        .container {
+            /* width: 100px; */
+            display: flex;
+            height: 50px;
+        
+        }
+
+        .item {
+            flex-basis: 10%;
+        }
+
+          .item:nth-child(2) {
+            order:-1 ;
+            /* ORDER (Flexbox/Grid):
+            - Muda a ordem visual sem alterar o HTML.
+            - Padrão: 0 (aceita valores negativos e positivos).
+            - Regra: Menor valor aparece primeiro (ex: -1, 0, 1, 2).
+            - Acessibilidade: Leitores de tela ignoram o 'order' e seguem o   HTML.
+*/
+        }
+    </style>
+</head>
+<body>
+       <style>
+        .container {
+            border: dashed;
+
+        }
+        .item {
+            --hue: 0;
+            text-align: center;
+            background-color: hsl(var(--hue), 100%, 70%);
+
+        }
+      
+    </style>
+    <div class="container">
+          <div class="item"  style= "--hue:0">1</div>
+          <div class="item"  style="--hue:100">2</div>
+          <div class="item"  style="--hue:200">3</div>
+          <div class="item"  style="--hue:300">4</div>
+           <div class="item"  style= "--hue:0">5</div>
+          <div class="item"  style="--hue:100">6</div>
+          <div class="item"  style="--hue:200">7</div>
+          <div class="item"  style="--hue:300">8</div>
+    </div>
+
+</body>
+</html>
