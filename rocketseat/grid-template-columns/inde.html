@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos do Grid no codigo</title>
+    <style>
+        #app {
+            display: grid;
+           grid-template-columns: repeat(2, 1fr);
+
+
+          /* UNIDADES DE MEDIDA NO GRID:
+
+            - px: Tamanho fixo (não muda conforme a tela diminui).
+
+            - fr: Unidade de fração flexível.
+              Ocupa uma parte do espaço disponível 
+             no container após descontar os tamanhos fixos.
+          */
+            
+        }
+
+
+        #app > div {
+            border: 1px solid red;
+        }
+        span {
+            border: solid 1px blue;
+        }
+
+        /* todo grid vai ter um (pai) e um (filho) */
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div>1</div>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+
+    </div>
+</body>
+</html>

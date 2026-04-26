@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos do Grid no codigo</title>
+    <style>
+        #app {
+            display: inline-grid;
+            /* inline-grid: Define um container que se comporta como elemento de linha (inline),
+            ocupando apenas a largura necessária, enquanto mantém a estrutura interna de Grid.
+            */
+        }
+
+
+        #app > div {
+            border: 1px solid red;
+        }
+        span {
+            border: solid 1px blue;
+        }
+
+        /* todo grid vai ter um (pai) e um (filho) */
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div>1</div>
+        <span>2</span>
+        <span>3</span>
+        
+
+    </div>
+</body>
+</html>
