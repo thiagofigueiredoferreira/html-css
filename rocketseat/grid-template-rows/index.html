@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Template Rows</title>
+ <style>
+        #app {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            height: 100vh;
+            border: 2px solid green;
+
+           /* grid-template-rows: 1fr 200px ; */
+
+           /* rows-linhas*/
+           /* height: 100vh;  -  pega a altuta da vioporte inteira*/
+           
+            
+        }
+
+        #app > div {
+            border: 1px solid red;
+        }
+        span {
+            border: solid 1px blue;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div>1</div>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+
+    </div>
+    
+</body>
+</html>
