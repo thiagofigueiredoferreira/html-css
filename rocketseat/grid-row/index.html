@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid row</title>
+  <style>
+            /*FILHOS DO CONTANINER*/
+
+        #app {
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            height: 100vh;
+            border: 2px solid green;
+
+        }
+
+        #app > * {
+
+            border: 1px solid red;
+        }
+
+       
+
+        #app header {
+        /* Atalho: grid-row: [start] / [end] */
+         grid-row: 1 / 4;
+
+        }
+
+        #app main {
+          /* Define o início e fim da linha e da coluna de uma vez */
+          grid-row: 1 / 3;
+          grid-column: 2 / 4;
+        }
+        #app aside {
+           /* Quando omitimos o fim, ele ocupa apenas 1 linha por padrão */
+            grid-row: 3;
+        }
+
+         #app footer {
+            grid-row: 3;
+          
+        }
+
+    </style>
+   
+</head>
+<body>
+     <div id="app">
+       <header>1</header>
+       <main>2</main>
+       <aside>3</aside>
+       <footer>4</footer>
+    </div>
+    
+</body>
+</html>
