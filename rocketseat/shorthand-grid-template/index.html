@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shorthand Grid Template</title>
+    <style>
+        /* Reset básico para evitar espaços indesejados */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #app {
+            display: grid;
+            /* 
+               A sintaxe correta com shorthand: 
+               "Mapa" Altura-da-linha
+               / Largura-das-colunas 
+            */
+            grid-template:
+                "A B B" 80px
+                "A B B" 40px
+                "A C D" 50px
+                / 80px 1fr 2fr;
+
+            /* Garante que o grid ocupe a tela toda e tenha espaçamento */
+            height: 100vh;
+            gap: 30px;
+            padding: 30px;
+        }
+
+        /* Estilização para visualização (bordas vermelhas como na sua imagem) */
+        #app > * {
+            border: 1px solid red;
+            display: flex;
+            align-items: flex-start;
+            padding: 5px;
+            
+        }
+
+        /* VINCULANDO O HTML AO MAPA DO GRID */
+        header {
+            grid-area: A;
+        }
+
+        main {
+            grid-area: B;
+        }
+
+        aside {
+            grid-area: C;
+        }
+
+        footer {
+            grid-area: D;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="app">
+        <header>1</header>
+        <main>2</main>
+        <aside>3</aside>
+        <footer>4</footer>
+    </div>
+
+</body>
+</html>
