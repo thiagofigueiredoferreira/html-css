@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamentos content</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(3, 100px);
+            gap: 8px;
+
+            /* trabalhando com eixo Y = Vertical */
+
+            /* align-content: start; conteudo fica no topo */
+            /* align-content: end; conteudo fica na parte de baixo da pagina */
+            /* align-content: center; conteudo fica no meio da pagina */
+            /* align-content: space-around; coloca espaço ao redor de cada elemento */
+            /* align-content: space-between; coloca espaço entre os elementos */
+
+            /* trabalhando com eixo X = horizontal*/
+
+            /* justify-content: start; conteudo fica no lado esquerdo da pagina*/
+            /* justify-content: end; conteudo fica do lado direito da pagina */
+            /* justify-content: center; conteudo fica no centro da pagina */
+            /* justify-content: space-around; coloca espaço ao redor de cada elemento */
+            /* justify-content: space-between; coloca espaço entre os elementos */
+            /* justify-content: space-evenly; coloca espaço entre os elementos de forma igual, se adapitando ao tamanho da tela */
+
+
+            /* trabalnhando com os dois ao mesmo tempo */
+
+            /* place-content: center; centraliza tudo no meio da pagina */
+            /* place-content: space-evenly; */
+            /* place-content: space-between; */
+            place-content: space-around;
+            
+
+
+            
+
+
+
+
+            height: 100vh;
+            width: 100vw;
+            background-color: black;
+        }
+
+        .grid > div {
+            background-color: #4b9cc7;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="grid">
+       <div>a</div>
+        <div>b</div>
+        <div>c</div>
+        <div>d</div>
+        <div>e</div>
+        <div>f</div>
+        <div>g</div>
+        <div>h</div>
+        <div>i</div>
+    </div>
+    
+</body>
+</html>
