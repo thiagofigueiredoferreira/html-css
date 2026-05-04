@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedades grid auto</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            display:grid ;
+            list-style: none;
+
+            /* grid-auto-flow: row; define que os itens adicionais fluem em linhas (padrão) */
+            /* grid-auto-rows: 1fr 2fr 3fr ; define a altura das linhas geradas automaticamente */
+            grid-auto-flow: column; 
+            /* grid-auto-flow: column; define que os itens adicionais fluem em colunas */
+            /* grid-auto-columns: 1fr; define a largura das colunas geradas automaticamente */
+            /* grid-auto-columns:50px 100px 200px 220px ; define várias larguras para colunas automáticas */
+            /* grid-auto-columns: max-content; define colunas automáticas com largura do conteúdo */
+            /* gap: 16px; adiciona espaçamento entre as células da grid */
+
+
+
+
+
+
+
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Services</li>
+        <li>Testimonials</li>
+        <li>Contact</li>
+    </ul>
+    
+</body>
+</html>
